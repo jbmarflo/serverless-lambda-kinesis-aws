@@ -1,0 +1,113 @@
+AWSTemplateFormatVersion: '2019-02-15'
+Transform: AWS::Serverless-2019-02-15
+Description: Function serverless s3 with lambda
+
+Mappings:
+  Environments:
+    dev:
+      Region: "us-west-2"
+      CdeBucket: "infraestructura.dev"
+      FunctionVersion: "$LATEST"
+
+Parameters:
+  EnvPrefix:
+    Description: "Parametro que define el entorno"
+    Type: String
+    Default: dev
+  SourceFunctionBucket:
+    Description: "Bucket donde se encuentra el codigo lambda"
+    Type: String
+    Default: infraestructura.dev
+  SourceFunctionKey:
+    Description: "Bucket donde se encuentra el codigo lambda"
+    Type: String
+    Default: build/lambda/bookingmotor/dev/serverless/bookingmotor-dev-serverless.zip
+
+Resources:
+  FunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "bookingmotor.${EnvPrefix}.serverless"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - 
+            Effect: "Allow"
+            Principal:
+              Service:
+                - "lambda.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+
+  RolePolicy: 
+    Type: "AWS::IAM::Policy"
+    Properties: 
+      PolicyName: !Sub "bookingmotor.${EnvPrefix}.serverless"
+      PolicyDocument: 
+        Version: "2012-10-17"
+        Statement:
+          - 
+            Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource: arn:aws:logs:*:*:*
+          - 
+            Effect: Allow
+            Action:
+              - "lambda:*"
+            Resource: !GetAtt ServerlessFunction.Arn
+          - 
+            Action:
+              - s3:DeleteObject*
+              - s3:GetObject*
+              - s3:PutObject*
+            Effect: Allow
+            Resource:
+              - !Join ["",["arn:aws:s3:::",!FindInMap [ Environments, !Ref EnvPrefix, CdeBucket ],"/*"]]
+          - 
+            Action:
+              - s3:DeleteObject*
+              - s3:GetObject*
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:s3:::serverless.${EnvPrefix}.bookingmotor.com/*"
+      Roles: 
+        - 
+          !Ref "FunctionRole"
+
+  ServerlessFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "bookingmotor-${EnvPrefix}-serverless"
+      Description: Redimensiona imagenes tras un evento de s3 o a demanda con invocacion
+      MemorySize: 1216
+      Timeout: 240
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri:
+        Bucket: !Ref SourceFunctionBucket
+        Key: !Ref SourceFunctionKey
+      Role: !GetAtt FunctionRole.Arn
+      Environment:
+        Variables:
+          CDE_BUCKET: !FindInMap [ Environments, !Ref EnvPrefix, CdeBucket ]
+      Events:
+        MessageUpload:
+          Type: S3
+          Properties:
+            Bucket: !Ref Bucket
+            Prefix: "messages/"
+            Events: s3:ObjectCreated:*
+  PostAlias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref ServerlessFunction
+      FunctionVersion: !FindInMap [ Environments, !Ref EnvPrefix, FunctionVersion]
+      Name: !Ref EnvPrefix
+
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "infraestructura.${EnvPrefix}"
