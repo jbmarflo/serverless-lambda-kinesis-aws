@@ -46,7 +46,7 @@ Process.prototype.buildMessages = function Process_buildMessages() {
                 if (thread.hasOwnProperty('filters')) {
                     msg.filter = Object.assign(msg.filter, thread.filters);
                 }
-
+                console.log(msg.searchId);
                 //Make a request
                 var timeout = msg.timeout;
                 var options = {
