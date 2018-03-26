@@ -1,0 +1,466 @@
+{
+  "searchId": 1234567,
+  "timeout": 60,
+  "type": null,
+  "productType": "Hotel",
+  "threads": [
+    {
+      "supplier": "BRK",
+      "filters": {
+        "partnerSupplier": 28
+      }
+    },
+    {
+      "supplier": "BED",
+      "filters": {
+        "destination": 1714
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67461
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 358538
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67403
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67389
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 181785
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67463
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67366
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67388
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67462
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67434
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 67420
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 358540
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 136319
+      }
+    },
+    {
+      "supplier": "TOU",
+      "filters": {
+        "destination": 292995
+      }
+    },
+    {
+      "supplier": "W2M",
+      "filters": {
+        "destination": 1045104
+      }
+    },
+    {
+      "supplier": "GOG",
+      "filters": {
+        "destination": 1006955
+      }
+    },
+    {
+      "supplier": "GOG",
+      "filters": {
+        "destination": 1006952
+      }
+    },
+    {
+      "supplier": "GOG",
+      "filters": {
+        "destination": 1006953
+      }
+    },
+    {
+      "supplier": "GOG",
+      "filters": {
+        "destination": 1006956
+      }
+    },
+    {
+      "supplier": "GOG",
+      "filters": {
+        "destination": 1004440
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 482332
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476928
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476927
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 477030
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 482333
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 482331
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476781
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476825
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476870
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476839
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 482330
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476948
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476886
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 482329
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476767
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 482328
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476930
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 477023
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476861
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476929
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 482311
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476862
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 476949
+      }
+    },
+    {
+      "supplier": "HTP",
+      "filters": {
+        "destination": 477034
+      }
+    },
+    {
+      "supplier": "TLB",
+      "filters": {
+        "destination": 1496286
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1018045
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1018043
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1016066
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1018048
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1014818
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1018047
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1018500
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1018046
+      }
+    },
+    {
+      "supplier": "DOW",
+      "filters": {
+        "destination": 1018499
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673264
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673370
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673266
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673263
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673268
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673269
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673265
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673369
+      }
+    },
+    {
+      "supplier": "JBT",
+      "filters": {
+        "destination": 673274
+      }
+    },
+    {
+      "supplier": "MIN",
+      "filters": {
+        "destination": 1118427
+      }
+    },
+    {
+      "supplier": "OMN",
+      "filters": {
+        "destination": 175366
+      }
+    },
+    {
+      "supplier": "FWR",
+      "filters": {
+        "destination": 629110
+      }
+    },
+    {
+      "supplier": "FWR",
+      "filters": {
+        "destination": 629111
+      }
+    },
+    {
+      "supplier": "FWR",
+      "filters": {
+        "destination": 629112
+      }
+    },
+    {
+      "supplier": "FWR",
+      "filters": {
+        "destination": 629113
+      }
+    }
+  ],
+  "filter": {
+    "nationality": "136",
+    "partner": 2,
+    "agency": 3,
+    "pricetypeagency": 3,
+    "language": "en",
+    "token": "sq3oa4l7djt8u6dqcatvuhdbsrf4bjis",
+    "destination": "496231",
+    "consolidate": "496231",
+    "destiny": "Miami, United States",
+    "product": null,
+    "hotelcode": null,
+    "checkin": "15-03-2018",
+    "checkout": "16-03-2018",
+    "nights": "1",
+    "rooms": "1",
+    "listrooms": [
+      {
+        "numroom": "1",
+        "count": "1",
+        "adults": "2",
+        "children": "0",
+        "childrenages": []
+      }
+    ],
+    "consumer": true,
+    "onlyavailable": false,
+    "productname": "",
+    "productstars": [],
+    "productmeals": []
+  },
+  "environment": "local"
+}
